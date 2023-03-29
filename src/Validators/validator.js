@@ -61,6 +61,6 @@ const isVaildPass = function (str) {
 
 
 
-module.exports = { isVaildPass, isvalidSize, isvalidPrice, isEmpty, isValidName, isValidEmail, isValidPhone, isValidBody, isValidpincode, isValidInstallment, isValidObjectId, isvalidQuantity, isVaildfile }
+module.exports = { isVaildPass, isEmpty, isValidName, isValidEmail, isValidPhone, isValidBody, isValidpincode, isValidInstallment, isValidObjectId }
 
 

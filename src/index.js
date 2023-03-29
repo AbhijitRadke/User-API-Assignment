@@ -6,7 +6,7 @@ const route = require('./routes/route')
 app.use(express.json())
 mongoose.set('strictQuery', true)
 
-mongoose.connect('mongodb+srv://kfarzan13:Farzankh13@demodb.dclp2mx.mongodb.net/group21Database?retryWrites=true&w=majority', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://prakashurkude:prakash1998@cluster0.nuhssqs.mongodb.net/User-Assignment', { useNewUrlParser: true })
     .then(() => console.log("MongoDB is connected"))
     .catch((err) => console.log(err.message))
 
