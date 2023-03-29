@@ -79,7 +79,7 @@ const userLogin = async function (req, res) {
 
         let userId = checkEmail._id
         let userToken = jwt.sign({ userId: userId.toString(), iat: Date.now() },
-            'NAFS', { expiresIn: "24h" }
+            'ABHIJIT', { expiresIn: "24h" }
         )
         res.setHeader("x-api-key", userToken)
 
