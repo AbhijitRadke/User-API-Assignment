@@ -5,7 +5,7 @@ WORKDIR /User-API-Assignment/src/index
 
 COPY package*.json ./
 
-RUN npm install 
+RUN npm i
 
 # Copy source code to container
 COPY . .

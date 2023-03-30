@@ -1,0 +1,105 @@
+# openapi: 3.0.0
+# info:
+#   title: Users API Assignment
+#   description: A simple API to perform CRUD oprations on user
+#   version: 1.0 
+  
+
+# servers:
+#   - url: http://localhost:3500/
+#     description:  Local server 
+  
+  
+
+ 
+# components:
+#   securitySchemes:
+#     ApiTokenss:        # arbitrary name for the security scheme
+#       type: apiKey
+#       in: header       # can be "header", "query" or "cookie"
+#       name: x-api-key
+    
+    
+       
+# paths:
+#   /users/{Id}:
+#     get:
+#       security:
+#        - ApiTokenss: []
+       
+#       summary: Returns a user details by ID.
+#       parameters:
+#         - name: userId
+#           in: path
+#           required: true
+#           description: Parameter description in CommonMark or HTML.
+#           schema:
+#             # type : integer
+#             # format: int64
+#             type: string
+#             example: "Users String"
+#             minimum: 1
+#       responses: 
+#         '200':
+#           description: OK
+  
+
+#   paths:
+#   /users:
+#     post:
+#       tags:
+#         - CreateUser API 
+#       summary: Create a New User. 
+#       description: <b> Request :- </b> <br /> <br />
+#               <b> fname and lname* </b>  is required <br /> 
+#               <b> Mobile number and Email is required* </b>  is required <br /> 
+#               <b> address and pincode* </b>  is required <br /> 
+
+#       parameters:
+#         - in: body
+                 
+#       post:
+#       requestBody:
+#         required: true
+#         content:
+#            application/json:
+#             schema:
+#               type: object
+#               properties: 
+#                 page_no:         
+#                   type: integer
+#                   example: 1  
+#                 type:       
+#                   type: string
+#                   example: "A" 
+#                 status:
+#                   type: integer
+#                   example: 0
+#                 fileName:
+#                   type: string 
+#                   format: binary
+         
+#       responses:
+#         '200':
+#           description: A user object. 
+#         '400':
+#           description: The specified user ID is invalid (not a number).
+#         '404':
+#           description: A user with the specified ID was not found.
+#         default:
+#           description: Unexpected error
+  
+# paths:
+#   /users:
+#     get:
+#       summary: Returns all users in the database.  
+#       description: 
+#         200:
+#           description: Returns the list of users
+#           schema:
+#             type: array
+#             items:
+#               $ref: user
+#         401:
+#           description: Hey! You're not the "admin" user!
+

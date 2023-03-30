@@ -3,31 +3,14 @@ const app = express()
 const mongoose = require('mongoose')
 const route = require('./routes/route')
 
-const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUI = require("swagger-ui-express");
 
+// const { swaggerServe, swaggerSetup } = require('./config')
 
-const options = {
-    definition: {
-        openapi: "3.0.0",
-        info: {
-            title: "Users API Assignment",
-            version: "1.0.0",
-            description: "A simple API to perform CRUD oprations on user",
-        },
-        servers: [
-            {
-                url: "http://localhost:3000",
-            },
-        ],
-    },
-    apis: ["./route/*.js"],
-};
+// app.get("/", (res, resp) => {
+//     resp.send('results');
+// });
 
-const specs = swaggerJsDoc(options);
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
-
-
+// app.use("/api-docs", swaggerServe, swaggerSetup); 
 
 
 
@@ -46,8 +29,8 @@ mongoose.connect('mongodb+srv://prakashurkude:prakash1998@cluster0.nuhssqs.mongo
 
 app.use('/', route)
 
-app.listen(3000, function () {
-    console.log("Express app is running on port 3000")
+app.listen(3500, function () {
+    console.log("Express app is running on port 3500")
 })
 
 

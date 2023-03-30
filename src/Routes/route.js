@@ -4,22 +4,6 @@ const userController = require("../Controllers/userControllers")
 const middlewares = require("../Middleware/auth")
 
 
-/**
- * @swagger
- * /route:
- *   get:
- *     summary: Returns the list of all the books
- *     tags: [Users]
- *     responses:
- *       200:
- *         description: The list of the Users
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/Models/userModel'
- */
 
 router.post("/users", userController.userCreate)
 
